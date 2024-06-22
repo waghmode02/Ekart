@@ -8,7 +8,7 @@ const Footer = () => {
         <img src={img}  alt="QKart-icon" className="h-10 w-auto" />
       </Box>
       <p className="mt-2 text-center">
-        QKart is your one stop solution to buy the latest trending items
+        EKart is your one stop solution to buy the latest trending items
         with India's Fastest Delivery to your doorstep
       </p>
     </Box>

@@ -56,20 +56,20 @@ const Cart = () => {
             {cartItems.map((obj) => (
               <div key={obj.id} className="max-w-sm mx-auto lg:max-w-full border border-gray-200 rounded-xl shadow-md p-6 dark:bg-gray-800 dark:border-gray-700">
                 <div className="flex justify-between">
-                  <img src={obj.imgSrc} className="h-40 rounded-md p-4" alt={obj.title} />
-                  <p className="text-gray-900 dark:text-white p-1">{obj.description}</p>
+                  <img src={obj.imgSrc} className="h-40 rounded-md p-4 text-white" alt={obj.title} />
+                  <p className="text-gray-900 dark:text-white p-1 text-white">{obj.description}</p>
                 </div>
                 <div className="flex flex-col">
                   <span className="text-gray-900 dark:text-white p-2">
-                    <button className='m-2 p-1 hover:bg-slate-500 hover-bounce' onClick={() => handleIncrement(obj.id)}>
+                    <button className='m-2 p-1 hover:bg-slate-500 hover-bounce text-white' onClick={() => handleIncrement(obj.id)}>
                       <IoIosAddCircle size={20} />
                     </button>
                     {obj.quantity}
-                    <button onClick={() => handleDecrement(obj.id)} className='m-2 p-1 hover:bg-slate-500 hover-bounce'>
+                    <button onClick={() => handleDecrement(obj.id)} className='m-2 p-1 hover:bg-slate-500 hover-bounce text-white'>
                       <GrSubtractCircle size={20} />
                     </button>
                   </span>
-                  <p className="text-gray-900 dark:text-white p-1">{obj.price} ₹</p>
+                  <p className="text-gray-900 dark:text-white p-1 text-white">{obj.price} ₹</p>
                   <button className='bg-red-700 text-white px-4 py-2 rounded-md transition-colors duration-300 hover:bg-red-600' onClick={() =>{ dispatch(deleteItem(obj.id)) ,toast.success("Cart Cleared", {
                     position: "top-right",
                     autoClose: 1500,
