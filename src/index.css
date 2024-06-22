@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-5px);
+    }
+  }
+  .hover-bounce {
+    transition: all 0.3s ease-in-out;
+  }
+  .hover-bounce:hover {
+    animation: bounce 0.5s;
+  }
+
+ 
